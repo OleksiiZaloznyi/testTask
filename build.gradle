@@ -40,14 +40,14 @@ dependencies {
 //	implementation 'com.consol:citrus-rest:3.4.0'
 //	implementation 'com.consol:citrus-soap:3.4.0'
 
-	testImplementation 'com.consol.citrus:citrus-core:3.4.0'
-	implementation 'com.consol.citrus:citrus-bom:3.4.0'
-	testImplementation 'com.consol.citrus:citrus-ftp:3.4.0'
-	implementation 'com.consol.citrus:citrus-base:3.4.0'
-	compileOnly 'com.consol.citrus:citrus-spring:3.4.0'
-	testImplementation 'com.consol.citrus:citrus-testng:3.4.0'
-
-	implementation 'com.consol.citrus:citrus-java-dsl:3.4.0'
+//	testImplementation 'com.consol.citrus:citrus-core:3.4.0'
+//	implementation 'com.consol.citrus:citrus-bom:3.4.0'
+//	testImplementation 'com.consol.citrus:citrus-ftp:3.4.0'
+//	implementation 'com.consol.citrus:citrus-base:3.4.0'
+//	compileOnly 'com.consol.citrus:citrus-spring:3.4.0'
+//	testImplementation 'com.consol.citrus:citrus-testng:3.4.0'
+//
+//	implementation 'com.consol.citrus:citrus-java-dsl:3.4.0'
 
 	testImplementation 'org.testng:testng:7.5.1'
 

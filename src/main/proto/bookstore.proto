@@ -24,6 +24,6 @@ message DeleteBookRequest {
 service BookstoreService {
   rpc AddBook(Book) returns (Book);
   rpc GetBook(GetBookRequest) returns (Book);
-  rpc UpdateBook(Book) returns (Book);
-  rpc DeleteBook(DeleteBookRequest) returns (Book);
+//  rpc UpdateBook(Book) returns (Book);
+//  rpc DeleteBook(DeleteBookRequest) returns (Book);
 }

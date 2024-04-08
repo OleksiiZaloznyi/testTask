@@ -1,14 +1,15 @@
 package com.example.bookstore.config;
 
-import java.io.IOException;
 import com.example.bookstore.service.BookstoreServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.SmartLifecycle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
+@Slf4j
 @Configuration
 public class GrpcServerConfig {
 
@@ -31,11 +32,12 @@ public class GrpcServerConfig {
             public void start() {
                 int grpcPort = environment.getProperty("grpc.server.port", Integer.class, 9090);
                 server = ServerBuilder.forPort(grpcPort)
-                        .addService(bookstoreService) // Use the injected service
+                        .addService(bookstoreService)
                         .build();
                 try {
                     server.start();
-                    System.out.println("Server started, listening on " + grpcPort);
+                    int actualPort = server.getPort();
+                    log.info("Server started, listening on " + actualPort);
                     isRunning = true;
                 } catch (Exception e) {
                     throw new RuntimeException(e);
